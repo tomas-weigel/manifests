@@ -1,6 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+bases:
+  - ../../base
 images:
-- name: gcr.io/kubeflow-images-public/centraldashboard
+- name: gcr.io/kubeflow-images-public/centraldashboard:vmaster-gf39279c0
   newName: sshakeri/i4ui
   newTag: latest
